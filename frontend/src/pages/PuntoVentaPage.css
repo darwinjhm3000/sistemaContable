@@ -1,0 +1,397 @@
+/* Estilos para Punto de Venta (POS) */
+.pos-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+.pos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pos-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.pos-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pos-content {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.pos-left-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pos-right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-width: 300px;
+}
+
+/* Campo de código de barras */
+.codigo-barras-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.codigo-barras-input label {
+  font-weight: bold;
+  color: #555;
+}
+
+.codigo-barras-input input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.codigo-barras-input input:focus {
+  outline: none;
+  border-color: #45a049;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* Búsqueda de productos */
+.busqueda-productos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.busqueda-productos label {
+  font-weight: bold;
+  color: #555;
+}
+
+.busqueda-productos input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.busqueda-productos input:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+.productos-lista {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 0.25rem;
+}
+
+.producto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.producto-item:hover {
+  background: #f5f5f5;
+}
+
+.producto-item:last-child {
+  border-bottom: none;
+}
+
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.producto-info strong {
+  color: #333;
+}
+
+.producto-info span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.producto-precio {
+  font-weight: bold;
+  color: #4CAF50;
+  font-size: 1.1rem;
+}
+
+/* Selector de cliente */
+.cliente-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cliente-select label {
+  font-weight: bold;
+  color: #555;
+}
+
+.cliente-select select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Carrito de venta */
+.carrito-venta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 300px;
+}
+
+.carrito-venta h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 0.5rem;
+}
+
+.carrito-items {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carrito-vacio {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.carrito-item:hover {
+  background: #f0f0f0;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-info strong {
+  color: #333;
+  font-size: 1rem;
+}
+
+.item-detalles {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.item-detalles input {
+  width: 80px;
+  padding: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.input-cantidad {
+  width: 60px !important;
+}
+
+.input-precio {
+  width: 100px !important;
+}
+
+.input-iva {
+  width: 70px !important;
+}
+
+.item-total {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #4CAF50;
+}
+
+.btn-eliminar {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+  background: #d32f2f;
+}
+
+/* Totales */
+.totales-venta {
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #f9f9f9;
+}
+
+.totales-venta h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  color: #333;
+  text-align: center;
+}
+
+.total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+}
+
+.total-item:last-child {
+  border-bottom: none;
+}
+
+.total-final {
+  border-top: 2px solid #4CAF50;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* Acciones de venta */
+.acciones-venta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-grande {
+  padding: 1.5rem !important;
+  font-size: 1.3rem !important;
+  font-weight: bold !important;
+}
+
+.btn-grande:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Indicadores de bloqueo */
+.indicadores-bloqueo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.badge-warning {
+  background: #ff9800;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pos-content {
+    flex-direction: column;
+  }
+
+  .pos-left-panel,
+  .pos-right-panel {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .pos-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .item-detalles {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+

@@ -1,0 +1,820 @@
+/* ============================================
+   Estilos Globales Responsive
+   Sistema Contable - Colombia
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+}
+
+#root {
+  min-height: 100vh;
+  display: block;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ============================================
+   Contenedores Responsive
+   ============================================ */
+
+.container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ============================================
+   Headers Responsive
+   ============================================ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* ============================================
+   Búsqueda Responsive
+   ============================================ */
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 12px 24px;
+  white-space: nowrap;
+}
+
+/* ============================================
+   Toolbar (Barra de Herramientas)
+   ============================================ */
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.toolbar-search {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.toolbar-search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.toolbar-search-btn {
+  padding: 10px 20px;
+  min-width: 50px;
+}
+
+.toolbar-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-nav-btn {
+  padding: 8px 12px;
+  min-width: 40px;
+  font-size: 16px;
+}
+
+.toolbar-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toolbar-nav-info {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toolbar-action-btn {
+  white-space: nowrap;
+}
+
+/* Responsive Toolbar */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar-search {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .toolbar-navigation {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .toolbar-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .toolbar-action-btn {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+/* ============================================
+   Tablas Responsive
+   ============================================ */
+
+.table-container {
+  background: white;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* Ancho mínimo para mantener legibilidad */
+}
+
+table th {
+  background-color: #f8f9fa;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ============================================
+   Formularios Responsive
+   ============================================ */
+
+.form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form h3 {
+  margin: 20px 0 15px 0;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.form h3:first-child {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   Botones Responsive
+   ============================================ */
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: #667eea;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ============================================
+   Alertas
+   ============================================ */
+
+.alert {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.alert-error {
+  background-color: #fee;
+  color: #c33;
+  border: 1px solid #fcc;
+}
+
+.alert-success {
+  background-color: #efe;
+  color: #3c3;
+  border: 1px solid #cfc;
+}
+
+.alert-warning {
+  background-color: #ffc;
+  color: #cc3;
+  border: 1px solid #ffc;
+}
+
+/* ============================================
+   Estados
+   ============================================ */
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #dc3545;
+}
+
+.text-warning {
+  color: #ffc107;
+}
+
+.stock-bajo {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* ============================================
+   Badges
+   ============================================ */
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-emitida {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge-borrador {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge-anulada {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* ============================================
+   Media Queries - Responsive Design
+   ============================================ */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .form-row {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  table {
+    min-width: 700px;
+  }
+}
+
+/* Móviles Grandes (576px - 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header h1 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .header button {
+    width: 100%;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  table {
+    min-width: 600px;
+    font-size: 14px;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+  }
+
+  .btn-small {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .factura-table {
+    min-width: 800px;
+    font-size: 13px;
+  }
+
+  .factura-table th,
+  .factura-table td {
+    padding: 6px;
+  }
+
+  .factura-table input[type="text"],
+  .factura-table input[type="number"],
+  .factura-table select {
+    font-size: 13px;
+    padding: 4px;
+  }
+
+  .totales-box {
+    justify-content: center;
+  }
+
+  .totales-content {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Móviles Pequeños (hasta 576px) */
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form h3 {
+    font-size: 16px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+
+  table {
+    min-width: 600px;
+    font-size: 13px;
+  }
+
+  table th,
+  table td {
+    padding: 8px 6px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .btn-small {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /* Mejorar visualización de botones en móviles */
+  .btn-small {
+    margin: 2px 0;
+    display: block;
+    width: 100%;
+  }
+
+  .factura-table {
+    min-width: 700px;
+    font-size: 12px;
+  }
+
+  .factura-table th,
+  .factura-table td {
+    padding: 5px 4px;
+  }
+
+  .factura-table input[type="text"],
+  .factura-table input[type="number"],
+  .factura-table select {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  .form-section {
+    padding: 10px;
+  }
+
+  .totales-row {
+    font-size: 14px;
+  }
+
+  .totales-row.total {
+    font-size: 16px;
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 8px;
+  }
+
+  .header h1 {
+    font-size: 16px;
+  }
+
+  table {
+    min-width: 500px;
+    font-size: 12px;
+  }
+
+  table th,
+  table td {
+    padding: 6px 4px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+/* ============================================
+   Utilidades Responsive
+   ============================================ */
+
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: block;
+  }
+}
+
+/* ============================================
+   Scroll Horizontal para Tablas
+   ============================================ */
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ============================================
+   Formularios de Facturación y Compras
+   ============================================ */
+
+.form-section {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.factura-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 1000px;
+}
+
+.factura-table th {
+  background: #667eea;
+  color: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-weight: 600;
+}
+
+.factura-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.factura-table input[type="text"],
+.factura-table input[type="number"],
+.factura-table select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.factura-table .text-right {
+  text-align: right;
+}
+
+.factura-table .text-center {
+  text-align: center;
+}
+
+.factura-table .text-bold {
+  font-weight: bold;
+}
+
+.factura-table .text-primary {
+  color: #667eea;
+}
+
+.totales-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.totales-content {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  min-width: 300px;
+}
+
+.totales-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.totales-row.total {
+  font-size: 18px;
+  padding-top: 10px;
+  border-top: 2px solid #667eea;
+  color: #667eea;
+  margin-top: 10px;
+}
+
+/* ============================================
+   Mejoras de Accesibilidad
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible para accesibilidad */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
